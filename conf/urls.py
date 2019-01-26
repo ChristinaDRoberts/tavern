@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from tavern.views import Home, Details, Results, Vote
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', Home.as_view()),
+    path('', Vote.as_view()),
+    path('', Results.as_view()),
+    path('', Details.as_view()),
 ]

@@ -14,7 +14,7 @@ class Lunch(models.Model):
 
 
 class Location(models.Model):
-    lunch = models.ForeignKey('lunch.Lunch', on_delete=models.CASCADE())
+    lunch = models.ForeignKey('Lunch', on_delete=models.CASCADE)
     votes = models.IntegerField(default=0)
 
     def __str__(self):
