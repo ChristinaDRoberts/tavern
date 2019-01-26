@@ -12,7 +12,7 @@ class Home(TemplateView):
         available_lunches = Lunch.objects.all()
 
         context = {
-            "lunch" : available_lunches
+            "lunches" : available_lunches
         }
 
         return context

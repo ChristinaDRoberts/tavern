@@ -1,4 +1,11 @@
-{% extends "base.html"%}
+{% extends "templates/base.html"%}
 
 
-<h2>testing home.html</h2>
+    {% for lunch in lunches %}
+        <a>{{ lunch.nickname }}</a>
+        <a>{{ lunch.user }}</a>
+        <a>{{ lunch.date }}<a>
+    {% endfor %}
+
+
+    <h2>testing home.html</h2>
