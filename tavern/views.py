@@ -15,17 +15,30 @@ class Home(TemplateView):
             "lunch" : available_lunches
         }
 
-
         return context
 
 
 class Details(TemplateView):
     template_name = "details.html"
 
+    def get_context_data(self, **kwargs):
+        available_locations = Location.objects.all()
+
+        context = {
+            "location" : available_locations
+        }
+
+        return context
 
 
 class Results(TemplateView):
     template_name = "results.html"
+
+    # def get_context_data(self, **kwargs):
+
+
+
+
 
 
 

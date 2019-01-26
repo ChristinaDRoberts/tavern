@@ -15,7 +15,8 @@ class Lunch(models.Model):
 
 class Location(models.Model):
     lunch = models.ForeignKey('Lunch', on_delete=models.CASCADE)
+    suggested_locations = models.CharField(max_length=100,  null=True)
     votes = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.nickname
+        return self.suggested_locations
