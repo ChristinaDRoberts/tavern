@@ -39,7 +39,8 @@ class Details(TemplateView):
 
 
         context = {
-                "location" : available_locations
+                "details" : available_locations,
+                "lunch" : lunch
         }
 
         return context
@@ -54,7 +55,7 @@ class Results(TemplateView):
         lunch_pk = self.kwargs.get('pk')
         lunch = Lunch.objects.get(pk=contest_pk)
 
-            # Create a context dictionary that will be sent to our template
+
         context = {
                 'lunch': lunch
         }
