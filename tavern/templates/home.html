@@ -5,10 +5,10 @@
         <ul>
             <li class="list-group-item"><a href="{% url 'tavern:detail' lunch.id %}">{{ lunch.nickname }}</a></li>
         </ul>
-{#        <a>{{ lunch.nickname }}</a><br/>#}
-{#        <p>{{ lunch.user }}</p><br/>#}
-{#        <p>{{ lunch.date }}<p><br>#}
-{#        <br/>#}
+
+        <p class="home-detail">{{ lunch.user }}</p>
+        <p class="home-detail">{{ lunch.date }}<p>
+        <br/>
     {% endfor %}
 
 

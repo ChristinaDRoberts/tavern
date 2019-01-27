@@ -2,7 +2,7 @@
 
 
 {% block content %}
-    
+
    <form action="{% url 'tavern:vote' lunch.id %}" method="post" class="row">
        {% csrf_token %}
 

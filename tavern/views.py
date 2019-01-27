@@ -53,7 +53,7 @@ class Results(TemplateView):
     def get_context_data(self, **kwargs):
 
         lunch_pk = self.kwargs.get('pk')
-        lunch = Lunch.objects.get(pk=contest_pk)
+        lunch = Lunch.objects.get(pk=lunch_pk)
 
 
         context = {
@@ -73,7 +73,7 @@ class Vote(View):
 
         # Now that we have the primary key for the contest, use the ORM to get the
         # object from the database
-        lunch = Lunch.objects.get(pk=contest_pk)
+        lunch = Lunch.objects.get(pk=lunch_pk)
 
         # The user selected a picture that they wanted to vote for in the contest.
         # They selected one of the radio buttons: <input name="photo" value="2" .../>
@@ -82,7 +82,7 @@ class Vote(View):
         location_voted_for_id = self.request.POST.get('location ')
 
         # Now we want to take our contest and lookup the photo object that the user selected
-        selected_location = lunch.photo_set.get(pk=location_voted_for_id)
+        selected_location = lunch.location_set.get(pk=location_voted_for_id)
 
         selected_location.votes += 1
         selected_location.save()
