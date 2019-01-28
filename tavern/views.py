@@ -25,7 +25,7 @@ class Details(TemplateView):
     template_name = "details.html"
 
     def get_context_data(self, **kwargs):
-        available_locations = Location.objects.all()
+        # available_locations = Location.objects.all()
 
         # The contest primary key is included on the url: locahost:8000/5/
                 # We use value capturing in our urls.py to get the # 5 and save it to pk
@@ -37,9 +37,8 @@ class Details(TemplateView):
                 # object from the database
         lunch= Lunch.objects.get(pk=lunch_pk)
 
-
         context = {
-                "details" : available_locations,
+                # "details_of_lunch_locations" : available_locations,
                 "lunch" : lunch
         }
 

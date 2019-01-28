@@ -1,4 +1,4 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 
 
 {% block content %}
@@ -6,11 +6,11 @@
    <form action="{% url 'tavern:vote' lunch.id %}" method="post" class="row">
        {% csrf_token %}
 
-       {% for lunch in lunch.location_set.all %}
-            <div class="col-md-2">
+       {% for location in lunch.location_set.all %}
+            <div class="col-md-4">
                 <div class="card">
                   <label for="Location{{ forloop.counter }}">
-                    <h2>{{ location.suggested_locations }}
+                      <h2 class = "location_listing">{{ location.suggested_locations }}</h2>
 
                        Select: <input type="radio" name="location" id="location{{ forloop.counter }}" value="{{ location.id }}" />
                 </div>
