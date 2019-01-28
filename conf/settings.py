@@ -40,7 +40,7 @@ SECRET_KEY = '+4wso030beozxkl*v3#5zoxn%4=hzo%y#gdv7h*%-i*fb^(k_o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', "https://tavern10.herokuapp.com/"]
+ALLOWED_HOSTS = ['localhost', "tavern10.herokuapp.com"]
 
 
 # Application definition
