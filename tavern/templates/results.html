@@ -10,13 +10,13 @@
 
     <div class="col-md-8">
         <ul class="list-group">
-            {% for  in lunch.location_set.all %}
+            {% for restaurant  in lunch.location_set.all %}
                 <li class="list-group-item">{{ lunch.suggested_locations }} -- {{ details.votes }} vote{{ lunch.votes|pluralize }}</li>
             {% endfor %}
         </ul>
     </div>
 
     <div class="col-md-4">
-        <a href="{% url 'tavern : detail' lunch.id %}">Vote again?</a>
+        <a href="{% url 'tavern:detail' lunch.id %}">Vote again?</a>
     </div>
 {% endblock %}

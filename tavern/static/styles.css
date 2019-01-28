@@ -1,17 +1,17 @@
-li{
-    text-align: center;
+li {
+  text-align: center;
 }
 
-.choose{
-    text-align: center;
-    color: black;
+.choose {
+  text-align: center;
 }
 
-.home-detail{
-    text-align: center;
-    color: mediumblue;
+.home-detail {
+  text-align: center;
 }
 
-.location_listing{
-    color : aqua;
+h1 {
+  text-align: center;
 }
+
+/*# sourceMappingURL=styles.css.map */

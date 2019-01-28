@@ -59,6 +59,7 @@ class Results(TemplateView):
                 'lunch': lunch
         }
 
+        return context
 
 # This view will not be a template view since we won't actually show a screen.
 # Once a user submits to this screen we will redirect.
@@ -78,7 +79,7 @@ class Vote(View):
         # They selected one of the radio buttons: <input name="photo" value="2" .../>
         # When they submitted the form, the name of the input got sent to the server with the value in the input.
         # We can use the input name get the value from the POST dictionary.
-        location_voted_for_id = self.request.POST.get('location ')
+        location_voted_for_id = self.request.POST.get('location')
 
         # Now we want to take our contest and lookup the photo object that the user selected
         selected_location = lunch.location_set.get(pk=location_voted_for_id)
@@ -87,7 +88,7 @@ class Vote(View):
         selected_location.save()
 
         # Now get the URL for our results screen using the route name from urls.py
-        results_url = reverse('location:results', args=(lunch.pk,))
+        results_url = reverse('tavern:results', args=(lunch.pk,))
 
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a

@@ -2,6 +2,7 @@
 
 
 {% block content %}
+    <h1 class="please-vote"> Please Vote on a Location !</h1>
 
    <form action="{% url 'tavern:vote' lunch.id %}" method="post" class="row">
        {% csrf_token %}

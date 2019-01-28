@@ -1,6 +1,7 @@
 {% extends "base.html"%}
 
 {% block content %}
+    <h1 class="choose">Choose A Lunch Event You would like to take a poll on !</h1>
     {% for lunch in lunches %}
         <ul>
             <li class="list-group-item"><a href="{% url 'tavern:detail' lunch.id %}">{{ lunch.nickname }}</a></li>
