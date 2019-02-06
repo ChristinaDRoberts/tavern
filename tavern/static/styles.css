@@ -1,3 +1,8 @@
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
 li {
   text-align: center;
 }
@@ -12,6 +17,11 @@ li {
 
 h1 {
   text-align: center;
+}
+
+.user-name {
+  color: darkblue;
+  background-color: lightgray;
 }
 
 /*# sourceMappingURL=styles.css.map */
