@@ -17,6 +17,7 @@
     </div>
 
     <div class="col-md-4">
-        <a href="{% url 'tavern:detail' lunch.id %}">Vote again?</a>
+        <button class="btn btn-light"><a href="{% url 'tavern:detail' lunch.id %}">Vote again?</a></button>
+        <button class="btn btn-light"><a href="{% url 'tavern:home' %}">Back to Available Lunches</a></button>
     </div>
 {% endblock %}

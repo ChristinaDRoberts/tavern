@@ -21,6 +21,7 @@ class Home(TemplateView):
         return context
 
 
+
 class Details(TemplateView):
     template_name = "details.html"
 

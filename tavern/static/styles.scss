@@ -5,7 +5,18 @@ $text-color : #001AC4;
 
 
 
+.p{
+    font-weight: bold;
+}
 
+a{
+    color: black;
+}
+.event{
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+}
 
 body{
     width:80%;
@@ -35,5 +46,7 @@ h1{
 .user-name {
 
     color: darkblue;
-    background-color: lightgray;
+    background-color: whitesmoke;
+    margin-top: 10px;
+    padding: 0;
 }

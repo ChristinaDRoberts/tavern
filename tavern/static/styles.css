@@ -1,3 +1,17 @@
+.p {
+  font-weight: bold;
+}
+
+a {
+  color: black;
+}
+
+.event {
+  margin: 0 auto;
+  border: 1px solid lightgray;
+  margin-bottom: 10px;
+}
+
 body {
   width: 80%;
   margin: 0 auto;
@@ -21,7 +35,9 @@ h1 {
 
 .user-name {
   color: darkblue;
-  background-color: lightgray;
+  background-color: whitesmoke;
+  margin-top: 10px;
+  padding: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,8 +1,9 @@
 {% extends "base.html"%}
 
 {% block content %}
-    <h1 class="choose">Choose A Lunch Event You would like to take a poll on !</h1>
+    <h1 class="choose">Vote In Your Favorite Restaurant For Lunch !</h1>
     {% for lunch in lunches %}
+        <div class="event col-8">
         <ul>
             <li class="list-group-item user-name"><a href="{% url 'tavern:detail' lunch.id %}">{{ lunch.nickname }}</a></li>
         </ul>
@@ -10,6 +11,7 @@
         <p class="home-detail">{{ lunch.user }}</p>
         <p class="home-detail">{{ lunch.date }}<p>
         <br/>
+    </div>
     {% endfor %}
 
 

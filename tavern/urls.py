@@ -18,4 +18,5 @@ urlpatterns = [
 
     # This route includes value capturing to grab the contest id as the pk variable
     path('<int:pk>/vote/', views.Vote.as_view(), name='vote'),
-]
+
+    ]
